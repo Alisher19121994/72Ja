@@ -1,31 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".MainActivity">
 
-    >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:orientation="vertical"
-        android:gravity="center">
+        android:layout_marginTop="100dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Register"
+            android:textSize="45sp"
+            android:gravity="center"
+            android:background="#98DC5E"
+            />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edit1"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textIn1"
             style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:endIconMode="clear_text"
+            app:counterEnabled="true"
+            app:counterMaxLength="12"
             app:helperText="Must be Typed!"
             app:helperTextTextColor="#8EE346"
             app:startIconDrawable="@drawable/ic_baseline_person_24">
 
             <EditText
-                android:id="@+id/edit1.1"
+                android:id="@+id/edit1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Name"
@@ -40,6 +52,7 @@
             android:layout_marginTop="10dp"
             app:counterEnabled="true"
             app:counterMaxLength="11"
+            android:id="@+id/textIn2"
             app:endIconMode="clear_text"
             app:helperText="Must be Typed!"
             app:helperTextTextColor="#8EE346"
@@ -47,7 +60,7 @@
             app:startIconDrawable="@drawable/ic_phone">
 
             <EditText
-                android:id="@+id/edit1.2"
+                android:id="@+id/edit2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Phone number"
@@ -56,19 +69,8 @@
                 android:maxLength="11" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/button"
-            android:backgroundTint="@null"
-            android:text="Register"
-            android:textSize="20sp"
-            />
 
     </LinearLayout>
-
-
 
 
 </androidx.core.widget.NestedScrollView>
